@@ -51,8 +51,23 @@ app.get('/weather', (req, res) => {
     })
 })
 
+app.get('/help/*', (req, res) => {
+    res.render('404', {
+        title: '404',
+        errorMessage: 'Help article not found',
+        name: 'Thomas D.'
+    })
+})
 
-
+// 404 Handler
+// wildcard: * = match everything that didnt get matched before
+app.get('*', (req, res) =>{
+    res.render('404', {
+        title: '404',
+        errorMessage: 'Page not found',
+        name: 'Thomas D.'
+    })
+})
 
 
 app.listen(3000, () =>{

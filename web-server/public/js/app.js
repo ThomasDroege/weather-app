@@ -18,5 +18,3 @@ fetch('http://localhost:3000/weather?address=boston').then( (response) =>{
         
     })
 })
-
-{error: "Unable to find location. Try another search."}
